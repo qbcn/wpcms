@@ -33,7 +33,6 @@
                 <?php echo stripslashes(get_option('wpyou_footer')); ?>
             <?php } else { ?> 
                 <p>Copyright &copy; <?php echo date("Y"); ?> <a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a> All Rights Reserved.</p>
-                <p>网站开发设计: <a href="http://www.wpyou.com" target="_blank">WPYOU</a></p>
             <?php } ?>
         </div>
     </div>
