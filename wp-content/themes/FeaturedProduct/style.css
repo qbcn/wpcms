@@ -33,7 +33,7 @@ a:hover{color:#1162B3; text-decoration:underline;}
 
 /* Logo */
 .logo{ float:left; font-size:28px; text-indent:-9999px;}
-.logo a{ width:500px; height:90px; background:url(images/logo.gif) no-repeat 0 center; display:block;}
+.logo a{ width:500px; height:90px; background:url(images/logo.png) no-repeat 0 center; display:block;}
 
 /* Header Right */
 .headerR{ float:right; padding:10px 0; width:350px;}
