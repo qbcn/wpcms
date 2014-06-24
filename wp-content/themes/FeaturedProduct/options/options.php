@@ -277,7 +277,6 @@ global $themename;
             </tr>
 		</table>
 	</form>
-     <p style="margin:30px 0 100px; line-height:20px;"><strong>开发设计：</strong>本高级主题由<a href="http://www.wpyou.com/" target="_blank"><strong>WPYOU</strong></a>开发设计, WPYOU所有原创设计（包括色调风格、功能结构等）均已受版权法律保护, 严禁盗版, 违者必究。<br /><strong>官方网站：</strong><a href="http://www.wpyou.com/" target="_blank">WPYOU - WordPress网站定制开发专家</a><br /><strong>技术支持: </strong><a href="http://www.wpyou.com/" target="_blank">WPYOU.COM</a></p>
 </div>
 <!-- markitup js begin -->
 <script type="text/javascript">
