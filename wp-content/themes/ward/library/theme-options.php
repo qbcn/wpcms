@@ -15,6 +15,8 @@ function bavotasan_theme_options() {
 		'display_comment_count' => 'on',
 		'display_categories' => '',
 		'excerpt_content' => 'excerpt',
+		'home_widget' =>'on',
+		'home_posts' =>'on',
 		'jumbo_headline_title' => 'Jumbo Headline!',
 		'jumbo_headline_text' => 'Got something important to say? Then make it stand out by using the jumbo headline option and get your visitor\'s attention right away.',
 	);
@@ -141,6 +143,34 @@ class Bavotasan_Customizer {
 				'excerpt' => __( 'Teaser Excerpt', 'ward' ),
 				'content' => __( 'Full Content', 'ward' ),
 			),
+		) );
+
+		$wp_customize->add_setting( 'ward_theme_options[home_widget]', array(
+			'default' => $bavotasan_theme_options['home_widget'],
+			'type' => 'option',
+			'capability' => 'edit_theme_options',
+		) );
+
+		$wp_customize->add_control( 'bavotasan_home_widget', array(
+			'label' => __( 'Display Home Page Top Widget Area', 'ward' ),
+			'section' => 'bavotasan_layout',
+			'settings' => 'ward_theme_options[home_widget]',
+			'priority' => 35,
+			'type' => 'checkbox',
+		) );
+
+		$wp_customize->add_setting( 'ward_theme_options[home_posts]', array(
+			'default' => $bavotasan_theme_options['home_posts'],
+			'type' => 'option',
+			'capability' => 'edit_theme_options',
+		) );
+
+		$wp_customize->add_control( 'bavotasan_home_posts', array(
+			'label' => __( 'Display Home Page Posts', 'ward' ),
+			'section' => 'bavotasan_layout',
+			'settings' => 'ward_theme_options[home_posts]',
+			'priority' => 40,
+			'type' => 'checkbox',
 		) );
 
 		// Jumbo headline section panel

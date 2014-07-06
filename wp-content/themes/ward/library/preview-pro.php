@@ -1,6 +1,6 @@
 <?php
 class Bavotasan_Preview_Pro {
-	private $theme_url = 'http://themes.bavotasan.com/themes/ward-pro/';
+	private $theme_url = 'https://themes.bavotasan.com/2013/ward-pro/';
 	private $video_url = 'http://www.youtube.com/watch?v=r-ZemVT_0u8';
 
 	public function __construct() {

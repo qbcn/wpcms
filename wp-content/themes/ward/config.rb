@@ -3,9 +3,10 @@
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "/"
-sass_dir = "library/css/sass"
+sass_dir = "library/sass"
 images_dir = "library/images"
 javascripts_dir = "library/js"
+fonts_dir = "library/fonts"
 
 output_style = :expanded
 environment = :production
@@ -14,6 +15,7 @@ environment = :production
 # relative_assets = true
 
 color_output = false
+
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:

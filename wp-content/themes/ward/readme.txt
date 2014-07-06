@@ -35,17 +35,7 @@ License: [[http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL|SIL O
 
 == CHANGELOG ==
 
-06/10/2014 v1.0.6
-* Removed accessibility tag
-* Fixed archive description
-* Remove home widget and home post option
-* Added front-page.php template
-* Added image selector to Image & Text widget
-* Updated footer credit link
-* Updated CSS
-* Updated language file
-
-01/20/2014 v1.0.5
+01/20/2014 v1.0.6
 * Updated footer credit
 * Added sidebar back to static home page
 * Renamed language file

@@ -43,9 +43,12 @@
 			</div>
 		</header>
 
-		<?php bavotasan_jumbotron(); ?>
+		<?php
+		bavotasan_jumbotron();
+		bavotasan_home_page_default_widgets();
+		?>
 
-		<?php if ( is_singular() && ! is_front_page() ) { ?>
+		<?php if ( is_singular() ) { ?>
 		<div id="main" class="container">
 			<div class="row">
 		<?php } else { ?>

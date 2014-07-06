@@ -8,7 +8,7 @@ $bavotasan_theme_options = bavotasan_theme_options();
 $display_categories = $bavotasan_theme_options['display_categories'];
 
 	if ( ! empty( $display_categories ) && 'page' != get_post_type() ) { ?>
-	<h3 class="post-category"><?php the_category( ', ' ); ?></h3>
+	<!--h3 class="post-category"><?php the_category( ', ' ); ?></h3-->
 	<?php } ?>
 	<h1 class="entry-title">
 		<?php if ( is_single() ) : ?>

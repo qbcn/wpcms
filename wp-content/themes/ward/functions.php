@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 /**
  * Defining constants
  *
@@ -9,10 +9,10 @@ define( 'BAVOTASAN_THEME_URL', get_template_directory_uri() );
 define( 'BAVOTASAN_THEME_TEMPLATE', get_template_directory() );
 define( 'BAVOTASAN_THEME_NAME', $bavotasan_theme_data->Name );
 
-//ÒÆ³ýÍ·²¿¶àÓàÐÅÏ¢  
-remove_action('wp_head','wp_generator');//½ûÖ¹ÔÚheadÐ¹Â¶wordpress°æ±¾ºÅ  
-remove_action('wp_head','rsd_link');//ÒÆ³ýheadÖÐµÄrel="EditURI"  
-remove_action('wp_head','wlwmanifest_link');//ÒÆ³ýheadÖÐµÄrel="wlwmanifest"  
+//ç§»é™¤å¤´éƒ¨å¤šä½™ä¿¡æ¯  
+remove_action('wp_head','wp_generator');//ç¦æ­¢åœ¨headæ³„éœ²wordpressç‰ˆæœ¬å·  
+remove_action('wp_head','rsd_link');//ç§»é™¤headä¸­çš„rel="EditURI"  
+remove_action('wp_head','wlwmanifest_link');//ç§»é™¤headä¸­çš„rel="wlwmanifest"  
 remove_action('wp_head','adjacent_posts_rel_link_wp_head', 10, 0 );//rel=pre  
 remove_action('wp_head','wp_shortlink_wp_head', 10, 0 );//rel=shortlink   
 remove_action('wp_head','rel_canonical' );  
@@ -135,7 +135,7 @@ function bavotasan_add_js() {
 	wp_enqueue_script( 'theme_js', BAVOTASAN_THEME_URL .'/library/js/theme.js', array( 'bootstrap' ), '', true );
 
 	wp_enqueue_style( 'theme_stylesheet', get_stylesheet_uri() );
-	wp_enqueue_style( 'google_fonts', 'http://fonts.googleapis.com/css?family=Lato:300', false, null, 'all' );
+	//wp_enqueue_style( 'google_fonts', 'http://fonts.googleapis.com/css?family=Lato:300', false, null, 'all' );
 }
 endif; // bavotasan_add_js
 
@@ -534,6 +534,71 @@ function bavotasan_nav_menu_args( $args ) {
         $args[ 'walker' ] = new Bavotasan_Page_Navigation_Walker;
 
     return $args;
+}
+
+/**
+ * Create the default widgets that are displayed in the home page top area
+ *
+ * @since 1.0.0
+ */
+function bavotasan_home_page_default_widgets() {
+	global $paged;
+	$bavotasan_theme_options = bavotasan_theme_options();
+	if ( $bavotasan_theme_options['home_widget'] && is_front_page() && 2 > $paged ) {
+		?>
+	<div id="home-page-widgets">
+		<div class="container">
+			<div class="row">
+			<?php if ( ! dynamic_sidebar( 'home-page-top-area' ) ) : ?>
+
+				<?php if ( current_user_can( 'edit_theme_options' ) ) { ?>
+					<div class="col-md-12">
+						<div class="alert alert-warning top"><?php printf( __( 'The four boxes below are Image Text Widgets that have been added to the <em>Home Page Top Area</em>. Add your own by going to the %sWidgets admin page%s or remove this section completely under the <em>Layout panel</em> on the %sTheme Options page%s.', 'ward' ), '<a href="' . admin_url( 'widgets.php' ) . '">', '</a>', '<a href="' . admin_url( 'customize.php' ) . '">', '</a>' ); ?></div>
+					</div>
+				<?php } ?>
+
+				<?php
+				/**
+				 * Default home page top area widgets
+				 */
+				?>
+				<aside class="home-widget col-md-3 bavotasan_custom_text_widget">
+					<img src="<?php echo BAVOTASAN_THEME_URL; ?>/library/images/ex01.jpg" alt="" class="img-circle aligncenter" />
+					<h3 class="home-widget-title">Responsive Design</h3>
+					<div class="textwidget">
+						<p>Resize your browser to see how <strong><?php echo BAVOTASAN_THEME_NAME; ?></strong> will adjust for desktops, tablets and handheld devices.</p>
+					</div>
+				</aside>
+
+				<aside class="home-widget col-md-3 bavotasan_custom_text_widget">
+					<img src="<?php echo BAVOTASAN_THEME_URL; ?>/library/images/ex02.jpg" alt="" class="img-circle aligncenter" />
+					<h3 class="home-widget-title">Fully Customizable</h3>
+					<div class="textwidget">
+						<p>Take advantage of the new Theme Options customizer to preview your changes before putting them live.</p>
+					</div>
+				</aside>
+
+				<aside class="home-widget col-md-3 bavotasan_custom_text_widget">
+					<img src="<?php echo BAVOTASAN_THEME_URL; ?>/library/images/ex03.jpg" alt="" class="img-circle aligncenter" />
+					<h3 class="home-widget-title">Bootstrap 3.0</h3>
+					<div class="textwidget">
+						<p>Bootstrap already has tons of great design elements. That's why we included a bunch of them in <strong><?php echo BAVOTASAN_THEME_NAME; ?></strong>.</p>
+					</div>
+				</aside>
+
+				<aside class="home-widget col-md-3 bavotasan_custom_text_widget">
+					<img src="<?php echo BAVOTASAN_THEME_URL; ?>/library/images/ex04.jpg" alt="" class="img-circle aligncenter" />
+					<h3 class="home-widget-title">Bold Typography</h3>
+					<div class="textwidget">
+						<p>Readability is key with all sites. Good thing <strong><?php echo BAVOTASAN_THEME_NAME; ?></strong> uses some of Google's most popular fonts.</p>
+					</div>
+				</aside>
+			<?php endif; ?>
+			</div>
+		</div>
+	</div>
+	<?php
+	}
 }
 
 /**
