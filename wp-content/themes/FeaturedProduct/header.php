@@ -98,10 +98,10 @@ if (is_home()) {
     <!-- HeaderRight begin -->
     <div class="headerR">
         <!-- Language Begin-->
-        <div class="language">
+        <!--div class="language">
             <a href="<?php if ( get_option('wpyou_cnsite_url')) { echo stripslashes(get_option('wpyou_cnsite_url')); } else { bloginfo('url'); } ?>" title="中文版" target="_blank" class="chinese">中文</a>
             <a href="<?php if ( get_option('wpyou_ensite_url')) { echo stripslashes(get_option('wpyou_ensite_url')); } else { bloginfo('url'); } ?>" title="English" target="_blank" class="english">EN</a>
-        </div>
+        </div-->
         <!-- Language end-->
         <div class="clearfix"></div>
         <!-- Search Begin-->

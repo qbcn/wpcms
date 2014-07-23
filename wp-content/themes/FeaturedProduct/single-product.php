@@ -12,7 +12,7 @@
                     <div class="productImg">
                         <a href="<?php if ( get_post_meta($post->ID, 'thumbnail', true) ) { echo $thumbnail = get_post_meta($post->ID, 'thumbnail', true); } elseif ( has_post_thumbnail() ) { $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 2000,1500 ), false); echo $thumbnail[0]; } else { echo catch_post_image(); } ?>" title="<?php the_title(); ?>">
                             <?php wpyou_post_thumbnail( 300,250 ) ?>
-                            <span class="zoomIn">点击放大</span>
+                            <!--span class="zoomIn">点击放大</span-->
                         </a>
                     </div>
                     <ul class="metaList">
@@ -21,7 +21,7 @@
                         <?php if ( get_post_meta($post->ID, 'ProductType', true) ) {  ?><li><strong>产品型号:</strong><?php echo get_post_meta($post->ID, 'ProductType', true); ?></li><?php } ?>
                         <li><?php if(has_excerpt()) { echo wpyou_strimwidth(strip_tags(apply_filters('the_excerpt()', $post->post_excerpt)), 0, 200," ..."); } else { echo wpyou_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200," ..."); } ?></li>
                         <li class="inquiry">
-                    	<a href="#respond" title="Inquiry Now"><img src="<?php bloginfo('template_url'); ?>/images/inquiry.gif" /></a>
+                    	<!--a href="#respond" title="Inquiry Now"><img src="<?php bloginfo('template_url'); ?>/images/inquiry.gif" /></a-->
                         <?php if ( get_option('wpyou_QQ') ) { ?><a href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo get_option('wpyou_QQ'); ?>&site=qq&menu=yes" title="QQ在线咨询"><img src="<?php bloginfo('template_url'); ?>/images/qq.gif" /></a><?php } ?>
                         <?php if ( get_option('wpyou_WangWang') ) { ?><a target="_blank" href="http://amos.im.alisoft.com/msg.aw?v=2&uid=<?php echo get_option('wpyou_WangWang'); ?>&site=cnalichn&s=1" alt="阿里旺旺"><img src="<?php bloginfo('template_url'); ?>/images/wangwang.gif" /></a><?php } ?>
                     	<?php if ( get_option('wpyou_MSN') ) { ?><a href="msnim:chat?contact=<?php echo $MSN = get_option('wpyou_MSN'); ?>" title="Chat with MSN"><img src="<?php bloginfo('template_url'); ?>/images/msn.gif" /></a><?php } ?>

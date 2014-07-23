@@ -11,11 +11,11 @@
         <?php } else { ?>
             <?php $products_perpage = 18; ?>
         <?php } ?>
-        <?php $wp_query = new WP_Query('cat='.$cat.'&orderby=date&caller_get_posts=1&order=DESC&posts_per_page='.$products_perpage.'&paged='.$paged); ?>
+        <?php $wp_query = new WP_Query('cat='.$cat.'&orderby=ID&caller_get_posts=1&order=ASC&posts_per_page='.$products_perpage.'&paged='.$paged); ?>
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
             	<li>
-                    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" ><?php wpyou_post_thumbnail( 120,120 ) ?></a>
+                    <div class="thumb-box"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" ><?php wpyou_post_thumbnail( 120,120 ) ?></a></div>
                     <h3><a href="<?php the_permalink() ?>"title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
                     <div class="describe"><?php if(has_excerpt()) { echo wpyou_strimwidth(strip_tags(apply_filters('the_excerpt()', $post->post_excerpt)), 0, 150," ..."); } else { echo wpyou_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 150," ..."); } ?></div>
                     <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="readmore">详细内容</a>

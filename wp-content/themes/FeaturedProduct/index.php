@@ -56,13 +56,13 @@
             </h2>
             <ul>
             <?php if (get_option('wpyou_products_id')) { $productsid = get_option('wpyou_products_id'); ?>
-                <?php query_posts('caller_get_posts=1&showposts=3&cat='.$productsid); ?>
+                <?php query_posts('orderby=ID&order=ASC&caller_get_posts=1&showposts=3&cat='.$productsid); ?>
             <?php } else { ?>
                 <?php query_posts('caller_get_posts=1&showposts=3&category_name=products'); ?>
             <?php } ?>
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                  <li>
-                    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" ><?php wpyou_post_thumbnail( 100,100 ) ?></a>
+                    <div class="thumb-box"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" ><?php wpyou_post_thumbnail( 100,100 ) ?></a></div>
                     <h3><a href="<?php the_permalink() ?>"title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
                     <div class="describe"><?php if(has_excerpt()) { echo wpyou_strimwidth(strip_tags(apply_filters('the_excerpt()', $post->post_excerpt)), 0, 70," ..."); } else { echo wpyou_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 70," ..."); } ?></div>
                 </li>
@@ -86,13 +86,13 @@
             </h2>
             <ul>
             <?php if (get_option('wpyou_app_id')) { $appid = get_option('wpyou_app_id'); ?>
-                <?php query_posts('caller_get_posts=1&showposts=3&cat='.$appid); ?>
+                <?php query_posts('orderby=ID&order=ASC&caller_get_posts=1&showposts=3&cat='.$appid); ?>
             <?php } else { ?>
                 <?php query_posts('caller_get_posts=1&showposts=3&category_name=application'); ?>
             <?php } ?>
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                  <li>
-                    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" ><?php wpyou_post_thumbnail( 100,100 ) ?></a>
+                    <div class="thumb-box"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" ><?php wpyou_post_thumbnail( 100,100 ) ?></a></div>
                     <h3><a href="<?php the_permalink() ?>"title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
                     <div class="describe"><?php if(has_excerpt()) { echo wpyou_strimwidth(strip_tags(apply_filters('the_excerpt()', $post->post_excerpt)), 0, 70," ..."); } else { echo wpyou_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 70," ..."); } ?></div>
                 </li>

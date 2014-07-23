@@ -1,4 +1,11 @@
 <?php
+//移除头部多余信息  
+remove_action('wp_head','wp_generator');//禁止在head泄露wordpress版本号  
+remove_action('wp_head','rsd_link');//移除head中的rel="EditURI"  
+remove_action('wp_head','wlwmanifest_link');//移除head中的rel="wlwmanifest"  
+remove_action('wp_head','adjacent_posts_rel_link_wp_head', 10, 0 );//rel=pre  
+remove_action('wp_head','wp_shortlink_wp_head', 10, 0 );//rel=shortlink   
+remove_action('wp_head','rel_canonical' );  
 //Widget
 if ( function_exists('register_sidebars') )
 {

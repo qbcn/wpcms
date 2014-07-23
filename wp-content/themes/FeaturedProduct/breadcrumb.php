@@ -3,8 +3,8 @@
 ;echo '  ';if (is_home()) {;echo '		您的位置: &nbsp;&nbsp;<a href="';echo get_settings('home');;echo '">';bloginfo('name');;echo '</a>
   ';}elseif(is_category()) {;echo '		您的位置: &nbsp;<a href="';echo get_settings('home');;echo '">首页</a> > ';$catstr = get_category_parents($cat,TRUE,' > ');
 echo substr($catstr,0,strlen($catstr) -3 );;echo '  ';}elseif (is_search()) {;echo '		您的位置: &nbsp;<a href="';echo get_settings('home');;echo '">首页</a> > ';echo $s;;echo '  ';}elseif(is_tag()) {;echo '		您的位置: &nbsp;<a href="';echo get_settings('home');;echo '">首页</a> > ';single_tag_title();;echo '  ';}elseif (is_day()) {;echo '		您的位置: &nbsp;<a href="';echo get_settings('home');;echo '">首页</a> >';the_time('Y, F jS');;echo '  ';}elseif (is_month()) {;echo '		您的位置: &nbsp;<a href="';echo get_settings('home');;echo '">首页</a> >';the_time('Y, F');;echo '  ';}elseif (is_year()) {;echo '		您的位置: &nbsp;<a href="';echo get_settings('home');;echo '">首页</a> >';the_time('Y');;echo '  ';}elseif (is_author()) {;echo '		您的位置: &nbsp;<a href="';echo get_settings('home');;echo '">首页</a> > 作者文章列表
-  ';}elseif (is_single()) {;echo '		您的位置: &nbsp;<a href="';echo get_settings('home');;echo '">首页</a> > ';the_category(' > ') ;echo ' > 产品详情
-  ';}elseif (is_page()) {;echo '		您的位置: &nbsp;<a href="';echo get_settings('home');;echo '">首页</a>
+  ';}elseif (is_single()) {;echo '		您的位置: &nbsp;<a href="';echo get_settings('home');;echo '">首页</a> > ';the_category(' > ') ;echo ' > ';the_title();
+  ;}elseif (is_page()) {;echo '		您的位置: &nbsp;<a href="';echo get_settings('home');;echo '">首页</a>
 		';
 $parent_id = $post->post_parent;
 $parents_list = array();
