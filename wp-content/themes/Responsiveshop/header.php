@@ -86,65 +86,18 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="xf"><!--外层div-->
-	<ul><!--外层ul-->
-		<!--回到顶部模块-->
-		<li ><b title="回到顶部"><a class="xfffa" href='#top' title="回到顶部"></a></b></li><!--设置回到顶部按钮图片，图片可以在css的背景图片设置好-->
-		<!--回到顶部模块结束-->
-		<li class="box2"><!--客服模块-->
-			<span>
-			<!--客服外层按钮-->
-			<a class="xfffa" id="btnShow" title="客服"></a>
-			<!--客服弹开-->
-			<ul class="text" id="divTop"  style="display:none">
-			<!--qq客服-->
-			<li><a target="blank" href="http://wpa.qq.com/msgrd?V=1&Uin=<?php echo get_option('mytheme_qq'); ?>&Site=themepark售前客服&Menu=yes"><img border="0" src="<?php bloginfo('template_url'); ?>/images/qq.gif"  alt="点击这里给我发消息" align="absmiddle"><?php echo get_option('mytheme_qqn'); ?></a></li> <!--这里的href可以填写客服QQ的弹出代码-->
-			<li><a target="blank" href="http://wpa.qq.com/msgrd?V=1&Uin=<?php echo get_option('mytheme_qq1'); ?>&Site=themepark售前客服&Menu=yes"><img border="0" src="<?php bloginfo('template_url'); ?>/images/qq.gif"  alt="点击这里给我发消息" align="absmiddle"><?php echo get_option('mytheme_qqn1'); ?></a></li> <!--这里的href可以填写客服QQ的弹出代码--> 
-			<li><a target="blank" href="http://wpa.qq.com/msgrd?V=1&Uin=<?php echo get_option('mytheme_qq2'); ?>&Site=themepark售前客服&Menu=yes"><img border="0" src="<?php bloginfo('template_url'); ?>/images/qq.gif"  alt="点击这里给我发消息" align="absmiddle"><?php echo get_option('mytheme_qqn2'); ?></a></li> <!--这里的href可以填写客服QQ的弹出代码-->
-			<!--qq客服-->
-			<li><h4>TELL:<?php echo get_option('mytheme_tell'); ?></h4></li><!--联系电话-->
-			</ul>
-			<!--客服弹开结束-->
-			</span>
-		</li><!--客服模块结束-->
-		<!--微博展示模块-->
-		<li class="box2">
-			<span>
-			<a class="xfffa"  id="btnShow2" title="微博"></a> <!--微博展示外层按钮-->
-			<!--微博展示弹出模块-->
-			<ul class="text" id="divTop2"  style="display:none">
-				<!--调用微博组件（详情请见相关文章）-->
-			   	<?php echo stripslashes(get_option('mytheme_weibo'));  ?>
-			</ul>
-			<!--微博展示弹出模块结束-->
-		   </span>
-		</li>
-		<!--微博展示模块结束-->
-		<li>
-			<!-- Baidu Button BEGIN --><!--百度分享-->
-			<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
-				<a id="shareCount" class="shareCount"></a>
-			</div>
-			<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=875647" ></script>
-			<script type="text/javascript" id="bdshell_js"></script>
-			<script type="text/javascript">
-			document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
-			</script>
-			<!-- Baidu Button END -->
-		</li>
-	</ul>
-</div><!-- xf -->
-
 <div id="page-wrap">
 	<div id="header">
 		<div class="header_in">
-			<h1 class="logo" title="<?php bloginfo('name'); ?>"><a href="<?php echo get_option('home'); ?>/">
+			<h1 class="logo" title="<?php bloginfo('name'); ?>">
+			<a href="<?php echo get_option('home'); ?>/">
 			<?php if (get_option('mytheme_logo')!=""): ?>
 			<img src="<?php echo get_option('mytheme_logo'); ?>"alt="<?php bloginfo('name'); ?>" /> 
 			<?php else : ?>
 			<img src="<?php bloginfo('template_url'); ?>/images/logo.png"alt="<?php bloginfo('name'); ?> "/>
 			<?php endif; ?>  
-			</a></h1>
+			</a>
+			</h1>
 			<div id="navigation">
 			<?php wp_nav_menu(array( 'theme_location' => 'header-menu' ) ); ?>
 			<div class="navkg2">收起导航；︿ </div>
@@ -168,7 +121,7 @@
 		<?php if (get_option('mytheme_ad_text')!=""): ?>
 		<p><?php echo get_option('mytheme_ad_text'); ?></p>
 		<?php else : ?>
-		<p>增强版格子商铺，可使用淘宝客插件，直接调取淘宝信息</p>
+		<p>增强版格子商铺</p>
 		<?php endif; ?>
 		</div>
  	</div><!-- ad -->

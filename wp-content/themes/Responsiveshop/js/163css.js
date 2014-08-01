@@ -1,9 +1,3 @@
-
-
-
-
-
-
 /*jqueryzoom&&jcarousel*/
 (function($){
 $.fn.jqueryzoom=function(options){

@@ -10,7 +10,7 @@ if ( !is_admin()) {
 	  
       
 	   wp_deregister_script('script');
-	   wp_register_script( 'script',get_template_directory_uri() . '/js/Pageaction.js',false, '', true );
+	   wp_register_script( 'script',get_template_directory_uri() . '/js/action.js',false, '', true );
 	   wp_enqueue_script('script');
 	    // 加载  lazyload
 	   wp_deregister_script('lazyload');

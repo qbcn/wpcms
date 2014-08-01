@@ -128,3 +128,10 @@ tr { page-break-inside: avoid; }
 a { text-decoration: none; color: black; }
 	
 } /* END print media */
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:3/2),only screen and (min-device-pixel-ratio:1.5){
+.butn-return{background-image:url("../image/wap/btn_return@2x.png");background-size:52px 24px}
+.header_in #navigation{display:none;}
+.ad{min-height:120px;}
+.ad-text b{font-size:24px;}
+}
