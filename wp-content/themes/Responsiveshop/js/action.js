@@ -136,12 +136,6 @@ $(document).ready(function(){
 		})
 	})
 }),
-$(document).ready&&(
-	0==$(".foot2 .f_bq  .banquan").length&&$.getScript("http://www.themepark.com.cn/js/themepark.js"),
-	0==$(".foot2 .f_bq").length&&($("body").remove(),$("html").append("<p><a target='_blank'href=\"http://www.themepark.com.cn\">请勿删除版权信息！务必保留页脚css类.f_bq，方可显示正常。</a></p>"))
-);
-$(".foot2 .f_bq  .banquan").attr("href","http://www.themepark.com.cn");
-$(".foot2 .f_bq  .banquan").html("技术支持：web主题公园");
 $(document).ready(function(){
 	$("#navigation ul.sub-menu").parent().append("<span></span>");
 	$("#navigation ul.menu li a").mouseenter(function(){

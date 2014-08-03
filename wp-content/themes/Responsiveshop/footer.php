@@ -18,7 +18,6 @@
 			</div>
 			<div class="f_bq"> 
 				<p>© <?php echo date("Y"); echo " "; bloginfo('name'); ?>  All Rigts Reserved.</p> 
-				<p><a href="http://www.themepdsadasark.com.cn" target="_blank" class="banquan">技园</a></p>
 			</div>
 		</div> 
 	</div><!-- foot -->

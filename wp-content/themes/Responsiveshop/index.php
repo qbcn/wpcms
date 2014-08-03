@@ -48,7 +48,7 @@
 						<img src="<?php echo catch_that_image() ?>" alt="<?php the_title(); ?>" />
 						<?php endif; ?>
 					</a> 
-					<b><a target="_blank" class="jj" href="<?php the_permalink() ?>"><?php echo mb_strimwidth(get_the_title(), 0, 50,"...") ?></a></b>
+					<b><a target="_blank" class="jj" href="<?php the_permalink() ?>"><?php echo mb_strimwidth(get_the_title(), 0, 24,"...") ?></a></b>
 				 </li>
 			<?php endforeach; ?>
 			<?php endif; ?>	   
