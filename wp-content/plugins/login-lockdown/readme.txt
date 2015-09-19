@@ -2,7 +2,7 @@
 Developer: Michael VanDeMar (michael@endlesspoetry.com)
 Tags: security, login
 Requires at least: 3.6
-Tested up to: 3.8.1
+Tested up to: 4.0
 Stable Tag: 1.6.1
 
 Limits the number of login attempts from a given IP range within a certain time period.
